@@ -8,7 +8,8 @@ function App() {
     <div className="App">
       <h1>My infinite react app</h1>
       <p>welcome :3</p>
-      <Jungkook />
+      <Jungkook name="jimin" age="1"/>
+      <Jungkook name="hoseok" age="25"/>
     </div>
   );
 }
