@@ -1,8 +1,7 @@
-import React, { Component } from "react";
+import React from "react";
 
-export default class jungkook extends Component {
-  render() {
-    const { ninjas } = this.props;
+const Jungkook = (props) => {
+    const { ninjas } = props;
     const ninjaList = ninjas.map(ninja => {
       return (
         <div className="jungkook" key={ ninja.id }>
@@ -16,5 +15,7 @@ export default class jungkook extends Component {
             { ninjaList }
         </div>
     )
-  }
 }
+
+export default Jungkook;
+ 
