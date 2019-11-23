@@ -1,17 +1,27 @@
-import React from 'react';
+
+import React, { Component } from "react";
 // import logo from './logo.svg';
 import Jungkook from './jungkook';
 
 
-function App() {
-  return (
+
+export default class App extends Component {
+
+  state = {
+    ninjas: [
+      { name: 'jimin' ,age: 12, id: 1 },
+      { name: 'hoseok' ,age: 22, id: 2 },
+      { name: 'jungkook' ,age: 34, id: 3 }
+    ]
+  }
+  render(){
+    return (
     <div className="App">
       <h1>My infinite react app</h1>
       <p>welcome :3</p>
-      <Jungkook name="jimin" age="1"/>
-      <Jungkook name="hoseok" age="25"/>
+      <Jungkook ninjas={this.state.ninjas} />
     </div>
   );
+  }
+  
 }
-
-export default App;
