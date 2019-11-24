@@ -15,13 +15,24 @@ export default class App extends Component {
       { name: 'jungkook' ,age: 34, id: 3 }
     ]
   }
+  addMember = (member) => {
+    
+    
+   member.id = Math.random()
+   let ninjas = [...this.state.ninjas, member]
+   this.setState({
+     ninjas: ninjas
+   })
+  
+
+  }
   render(){
     return (
     <div className="App">
       <h1>My infinite react app</h1>
       <p>welcome :3</p>
       <Jungkook ninjas={this.state.ninjas} />
-      <AddMember />
+      <AddMember addMember={this.addMember} />
     </div>
   );
   }
