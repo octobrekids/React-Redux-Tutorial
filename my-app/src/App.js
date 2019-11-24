@@ -31,6 +31,13 @@ export default class App extends Component {
       ninjas: ninjas
     })
   }
+  componentDidMount(){
+    console.log('component mounted')
+  }
+  componentDidUpdate(prevProps, prevState){
+    console.log('compponent updated')
+    console.log(prevProps, prevState)
+  }
 
   render(){
     return (
